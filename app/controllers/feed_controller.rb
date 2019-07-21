@@ -1,9 +1,6 @@
 class FeedController < ApplicationController
   def index
-    apartments = ExternalService::ApartmentsService.call
-    agencies = ExternalService::AgenciesService.call
-    
-    @unique_apartments = ApartmentFilter.call(apartments: apartments, agencies: agencies)
+    @unique_apartments = UniqueApartmentProvider.call
     
     respond_to do |format|
       format.html
