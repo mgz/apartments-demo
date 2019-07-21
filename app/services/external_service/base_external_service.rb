@@ -16,10 +16,6 @@ module ExternalService
       throw 'Please implement create_objects'
     end
     
-    def self.guess_object_class_name
-      self.name[/(\w+?)Service$/, 1].singularize
-    end
-    
     def self.endpoint_url
       throw 'Please implement endpoint_url'
     end
