@@ -1,0 +1,24 @@
+h1.mb-3 Apartments feed
+
+table.table.table-bordered.table-hover
+  thead
+    tr
+      th Address
+      th Apartment
+      th City
+      th Price
+      th Agency
+  tbody
+    - @unique_apartments.each do |apartment|
+      tr
+        td
+          =apartment.address
+          .badge.float-right
+            small
+              =link_to "https://www.google.lv/maps/place/#{apartment.address}, #{apartment.city}", target: '_blank' do
+                i.fas.fa-map-marker-alt
+                |  LOCATE
+        td =apartment.number
+        td =apartment.city
+        td =apartment.price
+        td =apartment.agency_name
