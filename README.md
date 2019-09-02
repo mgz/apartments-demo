@@ -1,3 +1,6 @@
+### Task description
+https://github.com/kirillplatonov/apartments-feed-test
+
 ### Running on Heroku
 https://apartments-demo.herokuapp.com/feed
 
